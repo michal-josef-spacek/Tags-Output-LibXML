@@ -1,9 +1,9 @@
 # Modules.
-use Tags2::Output::LibXML;
+use Tags::Output::LibXML;
 use Test::More 'tests' => 1;
 
 print "Testing: Instruction.\n";
-my $obj = Tags2::Output::LibXML->new;
+my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['i', 'perl', 'print "1\n";'],
 );

@@ -1,10 +1,10 @@
 # Modules.
-use Tags2::Output::LibXML;
+use Tags::Output::LibXML;
 use Test::More 'tests' => 2;
 
 print "Testing: Preserving from attributes.\n";
 print "- CHILD1 preserving is off.\n";
-my $obj = Tags2::Output::LibXML->new;
+my $obj = Tags::Output::LibXML->new;
 my $text = <<"END";
   text
      text
@@ -49,4 +49,4 @@ END
 is($ret, $right_ret);
 
 # TODO Pridat vnorene testy.
-# Bude jich hromada. Viz. ex18.pl az ex24.pl v Tags2::Output::Indent.
+# Bude jich hromada. Viz. ex18.pl az ex24.pl v Tags::Output::Indent.

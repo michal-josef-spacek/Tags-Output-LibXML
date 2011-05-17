@@ -1,9 +1,9 @@
 # Modules.
-use Tags2::Output::LibXML;
+use Tags::Output::LibXML;
 use Test::More 'tests' => 1;
 
 print "Testing: Attributes.\n";
-my $obj = Tags2::Output::LibXML->new;
+my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'foo'],
 	['a', 'one', '...........................'],

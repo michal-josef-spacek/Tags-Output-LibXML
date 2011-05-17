@@ -1,9 +1,9 @@
 # Modules.
-use Tags2::Output::LibXML;
+use Tags::Output::LibXML;
 use Test::More 'tests' => 3;
 
 print "Testing: CDATA.\n";
-my $obj = Tags2::Output::LibXML->new;
+my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'tag'],
 	['cd', 'aaaaa<dddd>dddd'],
@@ -30,7 +30,7 @@ END
 is($ret, $right_ret);
 
 print "Testing: CDATA errors.\n";
-$obj = Tags2::Output::LibXML->new;
+$obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'tag'],
 	['cd', 'aaaaa<dddd>dddd', ']]>'],

@@ -1,5 +1,5 @@
 # Modules.
-use Tags2::Output::LibXML;
+use Tags::Output::LibXML;
 use Test::More 'tests' => 1;
 
 print "Testing: 'data_callback' parameter.\n";
@@ -10,7 +10,7 @@ my $sub = sub {
 	}
 	return;
 };
-my $obj = Tags2::Output::LibXML->new(
+my $obj = Tags::Output::LibXML->new(
 	'cdata_callback' => $sub,
 	'data_callback' => $sub,
 );
