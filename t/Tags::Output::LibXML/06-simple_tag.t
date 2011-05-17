@@ -2,7 +2,6 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 4;
 
-print "Testing: Simple tag without parameters (sgml version).\n";
 my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'MAIN'],
@@ -15,7 +14,6 @@ my $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
-print "Testing: Simple tag with parameters (sgml version).\n";
 $obj->reset;
 $obj->put(
 	['b', 'MAIN'],
@@ -29,7 +27,6 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
-print "Testing: Simple tag without parameters (xml version).\n";
 $obj->reset;
 $obj->put(
 	['b', 'main'],
@@ -42,7 +39,6 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
-print "Testing: Simple tag with parameters (xml version).\n";
 $obj->reset;
 $obj->put(
 	['b', 'main'],

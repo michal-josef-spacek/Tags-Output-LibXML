@@ -2,7 +2,6 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 5;
 
-print "Testing: Normal tag without parameters.\n";
 my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'MAIN'],
@@ -16,7 +15,6 @@ my $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
-print "Testing: Normal tag with parameters.\n";
 $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'MAIN'],
@@ -45,7 +43,6 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
-print "Testing: Normal tag with long data.\n";
 my $long_data = 'a' x 1000;
 $obj = Tags::Output::LibXML->new;
 $obj->put(

@@ -2,7 +2,6 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 1;
 
-print "Testing: Attributes.\n";
 my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'foo'],

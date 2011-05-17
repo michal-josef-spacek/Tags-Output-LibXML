@@ -2,7 +2,6 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 1;
 
-print "Testing: 'data_callback' parameter.\n";
 my $sub = sub {
 	my $data_arr_ref = shift;
 	foreach my $data (@{$data_arr_ref}) {

@@ -2,7 +2,6 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 3;
 
-print "Testing: CDATA.\n";
 my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'tag'],
@@ -29,7 +28,6 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
-print "Testing: CDATA errors.\n";
 $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'tag'],

@@ -2,8 +2,6 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 2;
 
-print "Testing: Preserving from attributes.\n";
-print "- CHILD1 preserving is off.\n";
 my $obj = Tags::Output::LibXML->new;
 my $text = <<"END";
   text
@@ -28,7 +26,6 @@ my $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
-print "- CHILD1 preserving is on.\n";
 $obj->reset;
 $obj->put(
 	['b', 'MAIN'],
