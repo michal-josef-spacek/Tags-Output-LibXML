@@ -2,6 +2,7 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 5;
 
+# Test.
 my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'MAIN'],
@@ -15,6 +16,7 @@ my $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'MAIN'],
@@ -29,6 +31,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'MAIN'], 
@@ -43,6 +46,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 my $long_data = 'a' x 1000;
 $obj = Tags::Output::LibXML->new;
 $obj->put(
@@ -57,6 +61,7 @@ $right_ret = <<"END";
 END
 is($ret, $right_ret);
 
+# Test.
 $long_data = 'aaaa ' x 1000;
 $obj = Tags::Output::LibXML->new;
 $obj->put(

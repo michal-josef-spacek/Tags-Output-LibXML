@@ -2,6 +2,7 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 3;
 
+# Test.
 my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'tag'],
@@ -15,6 +16,7 @@ my $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'tag'],
@@ -28,6 +30,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['b', 'tag'],

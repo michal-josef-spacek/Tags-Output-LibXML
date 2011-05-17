@@ -2,6 +2,7 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 2;
 
+# Test.
 my $obj = Tags::Output::LibXML->new;
 my $text = <<"END";
   text
@@ -26,6 +27,7 @@ my $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'MAIN'],

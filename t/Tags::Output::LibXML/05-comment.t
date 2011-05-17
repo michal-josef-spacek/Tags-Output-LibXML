@@ -2,6 +2,7 @@
 use Tags::Output::LibXML;
 use Test::More 'tests' => 10;
 
+# Test.
 my $obj = Tags::Output::LibXML->new;
 $obj->put(
 	['c', 'comment'],
@@ -15,6 +16,7 @@ my $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['c', 'comment-'],
@@ -27,6 +29,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['c', '<tag>comment</tag>'],
@@ -38,6 +41,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'tag'],
@@ -51,6 +55,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'tag'],
@@ -65,6 +70,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'tag'],
@@ -80,6 +86,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'oo'],
@@ -97,6 +104,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'tag'],
@@ -112,6 +120,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'tag'],
@@ -126,6 +135,7 @@ $right_ret = <<'END';
 END
 is($ret, $right_ret);
 
+# Test.
 $obj->reset;
 $obj->put(
 	['b', 'tag1'],
