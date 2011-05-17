@@ -1,7 +1,7 @@
-package Tags2::Output::LibXML;
+package Tags::Output::LibXML;
 
 # Pragmas.
-use base qw(Tags2::Output::Core);
+use base qw(Tags::Output::Core);
 use strict;
 use warnings;
 
@@ -196,12 +196,12 @@ __END__
 
 =head1 NAME
 
- Tags2::Output::LibXML - Printing 'Tags2' structure by LibXML library.
+ Tags::Output::LibXML - Printing 'Tags' structure by LibXML library.
 
 =head1 SYNOPSIS
 
- use Tags2::Output::LibXML;
- my $tags2 = Tags2::Output::LibXML->new(%parameters);
+ use Tags::Output::LibXML;
+ my $tags2 = Tags::Output::LibXML->new(%parameters);
  $tags2->put(
 	['b', 'tag'],
 	['d', 'data'],
@@ -321,15 +321,10 @@ L<XML::LibXML(3pm)>.
 
 =head1 SEE ALSO
 
-L<Tags2(3pm)>,
-L<Tags2::Output::Core(3pm)>,
-L<Tags2::Output::ESIS(3pm)>,
-L<Tags2::Output::Indent(3pm)>,
-L<Tags2::Output::Indent2(3pm)>,
-L<Tags2::Output::PYX(3pm)>,
-L<Tags2::Output::Raw(3pm)>,
-L<Tags2::Output::SESIS(3pm)>,
-L<Tags2::Utils(3pm)>.
+L<Tags(3pm)>,
+L<Tags::Output::Core(3pm)>,
+L<Tags::Output::Raw(3pm)>,
+L<Tags::Utils(3pm)>.
 
 =head1 AUTHOR
 
