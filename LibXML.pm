@@ -6,7 +6,7 @@ use strict;
 use warnings;
 
 # Modules.
-use Error::Simple::Multiple qw(err);
+use Error::Pure qw(err);
 use Readonly;
 use XML::LibXML;
 
@@ -315,7 +315,7 @@ __END__
 
 =head1 DEPENDENCIES
 
-L<Error::Simple::Multiple(3pm)>,
+L<Error::Pure(3pm)>,
 L<Readonly(3pm)>,
 L<XML::LibXML(3pm)>.
 
