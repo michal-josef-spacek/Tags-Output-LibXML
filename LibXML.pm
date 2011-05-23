@@ -140,6 +140,12 @@ sub _put_cdata {
 sub _put_comment {
 	my ($self, @comments) = @_;
 	my $comment = join($EMPTY_STR, @comments);
+
+	# HACK LibXML has a bug.
+	if ($comment =~ m/-$/ms) {
+		$comment .= ' ';
+	}
+
 	my $comment_node = $self->{'doc'}->createComment($comment);
 	if (! defined $self->{'printed_tags'}->[0]) {
 		$self->{'doc'}->appendChild($comment_node);

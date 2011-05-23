@@ -26,10 +26,9 @@ $obj->put(
 	['c', 'comment-'],
 );
 $ret = $obj->flush;
-# XXX Bug in xml code.
 $right_ret = <<'END';
 <?xml version="1.1" encoding="UTF-8"?>
-<!--comment--->
+<!--comment- -->
 END
 is($ret, $right_ret);
 
