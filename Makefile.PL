@@ -15,7 +15,7 @@ WriteMakefile(
 		'Error::Pure' => 0.01,
 		'File::Object' => 0,
 		'Readonly' => 0,
-		'Tags' => 0.01,
+		'Tags::Output' => 0.01,
 		'XML::LibXML' => 0,
 	},
 	'VERSION' => 0.01,

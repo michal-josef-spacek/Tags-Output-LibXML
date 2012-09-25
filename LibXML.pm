@@ -1,7 +1,7 @@
 package Tags::Output::LibXML;
 
 # Pragmas.
-use base qw(Tags::Output::Core);
+use base qw(Tags::Output);
 use strict;
 use warnings;
 
@@ -328,7 +328,7 @@ L<XML::LibXML(3pm)>.
 =head1 SEE ALSO
 
 L<Tags(3pm)>,
-L<Tags::Output::Core(3pm)>,
+L<Tags::Output(3pm)>,
 L<Tags::Output::Raw(3pm)>,
 L<Tags::Utils(3pm)>.
 
