@@ -29,6 +29,7 @@ requires:
   Readonly: 0
   Tags::Output: 0.02
   XML::LibXML: 0
+  perl: 5.6.0
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Tags-Output-LibXML
   homepage: https://github.com/tupinek/Tags-Output-LibXML

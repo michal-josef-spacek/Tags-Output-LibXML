@@ -15,6 +15,7 @@ requires 'Error::Pure' => 0.05;
 requires 'Readonly' => 0;
 requires 'Tags::Output' => 0.02;
 requires 'XML::LibXML' => 0;
+requires 'perl' => '5.6.0';
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
 	'?Name=Tags-Output-LibXML';
 resources 'homepage' => 'https://github.com/tupinek/Tags-Output-LibXML';
