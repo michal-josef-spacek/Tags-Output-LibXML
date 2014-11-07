@@ -1,0 +1,114 @@
+NAME
+     Tags::Output::LibXML - Printing 'Tags' structure by LibXML library.
+
+SYNOPSIS
+     use Tags::Output::LibXML;
+     my $tags2 = Tags::Output::LibXML->new(%parameters);
+     $tags2->put(
+            ['b', 'tag'],
+            ['d', 'data'],
+     );
+     my @open_tags = $tags2->open_tags;
+     $tags2->finalize;
+     $tags2->flush;
+     $tags2->reset;
+
+DESCRIPTION
+     This class is only for XML structures.
+
+METHODS
+    "new(%parameters)"
+             Constructor.
+
+            *       "cdata_callback"
+
+                     Subroutine for output processing of cdata.
+                     Input argument is reference to array.
+                     Default value is undef.
+                     Example is similar as 'data_callback'.
+
+            *       "data_callback"
+
+                     Subroutine for output processing of data, cdata and raw data.
+                     Input argument is reference to array.
+                     Default value is undef.
+
+                     Example:
+                     'data_callback' => sub {
+                             my $data_ar = shift;
+                             foreach my $data (@{$data_ar}) {
+
+                                     # Some process.
+                                     $data =~ s/^\s*//ms;
+                             }
+                     }
+
+            *       "encoding"
+
+                     Encoding for XML header.
+                     Default is 'UTF-8'.
+
+            *       "no_simple"
+
+                     TODO
+
+            *       "output_handler"
+
+                     Handler for print output strings.
+                     Must be a GLOB.
+                     Default is undef.
+
+            *       "preserved"
+
+                     TODO
+
+            *       "set_indent"
+
+                     TODO
+                     Default is 0.
+
+            *       "skip_bad_tags"
+
+                     TODO
+
+            *       "xml_version"
+
+                     XML version for XML header.
+                     Default is "1.1".
+
+    "finalize()"
+             TODO
+
+    "flush()"
+             TODO
+
+    "open_tags()"
+             TODO
+
+    "put()"
+             TODO
+
+    "reset()"
+             TODO
+
+ERRORS
+     TODO
+
+EXAMPLE
+     TODO
+
+DEPENDENCIES
+    Error::Pure, Readonly, XML::LibXML.
+
+SEE ALSO
+    Tags, Tags::Output, Tags::Output::Raw, Tags::Utils.
+
+AUTHOR
+    Michal Špaček skim@cpan.org
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+
