@@ -327,10 +327,7 @@ L<XML::LibXML>.
 
 =head1 SEE ALSO
 
-L<Tags>,
-L<Tags::Output>,
-L<Tags::Output::Raw>,
-L<Tags::Utils>.
+L<Task::Tags>.
 
 =head1 AUTHOR
 

@@ -101,7 +101,7 @@ DEPENDENCIES
     Error::Pure, Readonly, XML::LibXML.
 
 SEE ALSO
-    Tags, Tags::Output, Tags::Output::Raw, Tags::Utils.
+    Task::Tags.
 
 AUTHOR
     Michal Špaček skim@cpan.org
