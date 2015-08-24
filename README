@@ -3,15 +3,12 @@ NAME
 
 SYNOPSIS
      use Tags::Output::LibXML;
-     my $tags2 = Tags::Output::LibXML->new(%parameters);
-     $tags2->put(
-            ['b', 'tag'],
-            ['d', 'data'],
-     );
-     my @open_tags = $tags2->open_tags;
-     $tags2->finalize;
-     $tags2->flush;
-     $tags2->reset;
+     my $tags = Tags::Output::LibXML->new(%parameters);
+     $tags->put(['b', 'element']);
+     my @open_tags = $tags->open_tags;
+     $tags->finalize;
+     $tags->flush($reset_flag);
+     $tags->reset;
 
 DESCRIPTION
      This class is only for XML structures.
@@ -50,7 +47,9 @@ METHODS
 
             *       "no_simple"
 
-                     TODO
+                     TODO not implemented.
+                     Reference to array of tags, that can't by simple.
+                     Default is [].
 
             *       "output_handler"
 
@@ -60,16 +59,18 @@ METHODS
 
             *       "preserved"
 
-                     TODO
+                     TODO not implemented.
+                     Default value is reference to blank array.
 
             *       "set_indent"
 
-                     TODO
+                     Set indent flag.
                      Default is 0.
 
             *       "skip_bad_tags"
 
-                     TODO
+                     Skip bad tags.
+                     Default value is 0.
 
             *       "xml_version"
 
@@ -77,19 +78,26 @@ METHODS
                      Default is "1.1".
 
     "finalize()"
-             TODO
+             Finalize Tags output.
+             Automaticly puts end of all opened tags.
+             Returns undef.
 
-    "flush()"
-             TODO
+    "flush($reset_flag)"
+             Flush tags in object.
+             If defined 'output_handler' flush to its.
+             Or return code.
+             If enabled $reset_flag, then resets internal variables via reset method.
 
     "open_tags()"
-             TODO
+             Return array of opened tags.
 
-    "put()"
-             TODO
+    "put(@data)"
+             Put tags code in tags format.
+             Returns undef.
 
     "reset()"
-             TODO
+             Resets internal variables.
+             Returns undef.
 
 ERRORS
      TODO

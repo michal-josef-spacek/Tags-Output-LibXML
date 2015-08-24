@@ -18,18 +18,25 @@ our $VERSION = 0.01;
 
 # Flush tags in object.
 sub flush {
-	my $self = shift;
+	my ($self, $reset_flag) = @_;
+	my $ret;
 	my $ouf = $self->{'output_handler'};
 	if ($ouf) {
 		no warnings;
 		print {$ouf} $self->{'doc'}->toString(
 			$self->{'set_indent'} ? 2 : 0)
 			or err 'Cannot write to output handler.';
-		return;
 	} else {
-		return $self->{'doc'}->toString(
+		$ret = $self->{'doc'}->toString(
 			$self->{'set_indent'} ? 2 : 0);
 	}
+
+	# Reset.
+	if ($reset_flag) {
+		$self->reset;
+	}
+
+	return $ret;
 }
 
 # Resets internal variables.
@@ -207,15 +214,12 @@ __END__
 =head1 SYNOPSIS
 
  use Tags::Output::LibXML;
- my $tags2 = Tags::Output::LibXML->new(%parameters);
- $tags2->put(
-	['b', 'tag'],
-	['d', 'data'],
- );
- my @open_tags = $tags2->open_tags;
- $tags2->finalize;
- $tags2->flush;
- $tags2->reset;
+ my $tags = Tags::Output::LibXML->new(%parameters);
+ $tags->put(['b', 'element']);
+ my @open_tags = $tags->open_tags;
+ $tags->finalize;
+ $tags->flush($reset_flag);
+ $tags->reset;
 
 =head1 DESCRIPTION
 
@@ -261,7 +265,9 @@ __END__
 
 =item * C<no_simple>
 
- TODO
+ TODO not implemented.
+ Reference to array of tags, that can't by simple.
+ Default is [].
 
 =item * C<output_handler>
 
@@ -271,16 +277,18 @@ __END__
 
 =item * C<preserved>
 
- TODO
+ TODO not implemented.
+ Default value is reference to blank array.
 
 =item * C<set_indent>
 
- TODO
+ Set indent flag.
  Default is 0.
 
 =item * C<skip_bad_tags>
 
- TODO
+ Skip bad tags.
+ Default value is 0.
 
 =item * C<xml_version>
 
@@ -291,23 +299,30 @@ __END__
 
 =item C<finalize()>
 
- TODO
+ Finalize Tags output.
+ Automaticly puts end of all opened tags.
+ Returns undef.
 
-=item C<flush()>
+=item C<flush($reset_flag)>
 
- TODO
+ Flush tags in object.
+ If defined 'output_handler' flush to its.
+ Or return code.
+ If enabled $reset_flag, then resets internal variables via reset method. 
 
 =item C<open_tags()>
 
- TODO
+ Return array of opened tags.
 
-=item C<put()>
+=item C<put(@data)>
 
- TODO
+ Put tags code in tags format.
+ Returns undef.
 
 =item C<reset()>
 
- TODO
+ Resets internal variables.
+ Returns undef.
 
 =back
 
