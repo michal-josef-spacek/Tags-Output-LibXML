@@ -160,7 +160,8 @@ DEPENDENCIES
     Error::Pure, Readonly, XML::LibXML.
 
 SEE ALSO
-    Task::Tags.
+    Task::Tags
+        Install the Tags modules.
 
 AUTHOR
     Michal Špaček skim@cpan.org

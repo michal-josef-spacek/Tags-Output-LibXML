@@ -387,7 +387,13 @@ L<XML::LibXML>.
 
 =head1 SEE ALSO
 
-L<Task::Tags>.
+=over
+
+=item L<Task::Tags>
+
+Install the Tags modules.
+
+=back
 
 =head1 AUTHOR
 
