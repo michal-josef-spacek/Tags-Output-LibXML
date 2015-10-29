@@ -165,7 +165,7 @@ EXAMPLE2
      # <text>řčěšřšč</text>
 
 DEPENDENCIES
-    Error::Pure, Readonly, XML::LibXML.
+    Error::Pure, Readonly, Tags::Output, XML::LibXML.
 
 SEE ALSO
     Task::Tags

@@ -398,6 +398,7 @@ __END__
 
 L<Error::Pure>,
 L<Readonly>,
+L<Tags::Output>,
 L<XML::LibXML>.
 
 =head1 SEE ALSO
