@@ -14,7 +14,7 @@ use XML::LibXML;
 Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Flush tags in object.
 sub flush {
@@ -430,6 +430,6 @@ Michal Špaček L<skim@cpan.org>
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
