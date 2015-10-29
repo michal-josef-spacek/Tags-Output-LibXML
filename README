@@ -168,6 +168,12 @@ DEPENDENCIES
     Error::Pure, Readonly, Tags::Output, XML::LibXML.
 
 SEE ALSO
+    Tags
+        Structure oriented SGML/XML/HTML/etc. elements manipulation.
+
+    Tags::Output
+        Base class for Tags::Output::*.
+
     Task::Tags
         Install the Tags modules.
 

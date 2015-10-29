@@ -405,6 +405,14 @@ L<XML::LibXML>.
 
 =over
 
+=item L<Tags>
+
+Structure oriented SGML/XML/HTML/etc. elements manipulation.
+
+=item L<Tags::Output>
+
+Base class for Tags::Output::*.
+
 =item L<Task::Tags>
 
 Install the Tags modules.
