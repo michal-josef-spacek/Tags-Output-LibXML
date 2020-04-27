@@ -3,6 +3,7 @@
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Improve SYNOPSIS section in doc.
  - Update Module::Install to 1.19 version.
+ - Update author github username.
  - Update copyright years.
 
 0.02 2015-10-29T22:56:13+01:00
