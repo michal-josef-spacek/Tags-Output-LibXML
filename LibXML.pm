@@ -413,6 +413,10 @@ Install the Tags modules.
 
 =back
 
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/Tags-Output-LibXML>
+
 =head1 AUTHOR
 
 Michal Špaček L<skim@cpan.org>
