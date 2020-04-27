@@ -174,11 +174,16 @@ SEE ALSO
     Task::Tags
         Install the Tags modules.
 
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Tags-Output-LibXML>
+
 AUTHOR
-    Michal Špaček skim@cpan.org
+    Michal Josef Špaček skim@cpan.org
+
+    <http://skim.cz>
 
 LICENSE AND COPYRIGHT
-    © 2011-2020 Michal Špaček
+    © 2011-2020 Michal Josef Špaček
 
     BSD 2-Clause License
 
