@@ -1,11 +1,9 @@
 package Tags::Output::LibXML;
 
-# Pragmas.
 use base qw(Tags::Output);
 use strict;
 use warnings;
 
-# Modules.
 use Error::Pure qw(err);
 use Readonly;
 use XML::LibXML;
@@ -13,7 +11,6 @@ use XML::LibXML;
 # Constants.
 Readonly::Scalar my $EMPTY_STR => q{};
 
-# Version.
 our $VERSION = 0.03;
 
 # Flush tags in object.
@@ -332,11 +329,9 @@ __END__
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Tags::Output::LibXML;
 
  # Object.
@@ -358,11 +353,9 @@ __END__
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Encode;
  use Tags::Output::LibXML;
 

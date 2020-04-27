@@ -103,11 +103,9 @@ ERRORS
      TODO
 
 EXAMPLE1
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Tags::Output::LibXML;
 
      # Object.
@@ -128,11 +126,9 @@ EXAMPLE1
      # <text>data</text>
 
 EXAMPLE2
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Encode;
      use Tags::Output::LibXML;
 
