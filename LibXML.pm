@@ -417,6 +417,8 @@ Install the Tags modules.
 
 Michal Špaček L<skim@cpan.org>
 
+L<http://skim.cz>
+
 =head1 LICENSE AND COPYRIGHT
 
 © 2011-2020 Michal Špaček

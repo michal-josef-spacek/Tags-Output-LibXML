@@ -1,4 +1,5 @@
 0.03
+ - Add author website to AUTHOR section in doc.
  - Fix Makefile.PL fails with no '.' in @INC.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Improve SYNOPSIS section in doc.
