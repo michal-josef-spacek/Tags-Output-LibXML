@@ -211,6 +211,7 @@ __END__
 =head1 SYNOPSIS
 
  use Tags::Output::LibXML;
+
  my $tags = Tags::Output::LibXML->new(%parameters);
  $tags->put(['b', 'element']);
  my @open_tags = $tags->open_tags;
