@@ -330,6 +330,8 @@ __END__
 
 =head1 EXAMPLE1
 
+=for comment filename=simple_example.pl
+
  use strict;
  use warnings;
 
@@ -353,6 +355,8 @@ __END__
  # <text>data</text>
 
 =head1 EXAMPLE2
+
+=for comment filename=simple_example_utf8.pl
 
  use strict;
  use warnings;
