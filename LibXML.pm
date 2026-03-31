@@ -249,11 +249,11 @@ __END__
  Example:
  'data_callback' => sub {
          my $data_ar = shift;
-	 foreach my $data (@{$data_ar}) {
+         foreach my $data (@{$data_ar}) {
 
-	         # Some process.
-	         $data =~ s/^\s*//ms;
-	 }
+                 # Some process.
+                 $data =~ s/^\s*//ms;
+         }
  }
 
 =item * C<encoding>
@@ -341,8 +341,8 @@ __END__
  # Put data.
  $tags->put(
          ['b', 'text'],
-	 ['d', 'data'],
-	 ['e', 'text'],
+         ['d', 'data'],
+         ['e', 'text'],
  );
 
  # Print.
@@ -363,12 +363,12 @@ __END__
  # Object.
  my $tags = Tags::Output::LibXML->new(
          'data_callback' => sub {
-	         my $data_ar = shift;
-		 foreach my $data (@{$data_ar}) {
-		         $data = encode_utf8($data);
-		 }
+                 my $data_ar = shift;
+                 foreach my $data (@{$data_ar}) {
+                         $data = encode_utf8($data);
+                 }
                  return;
-	 },
+         },
  );
 
  # Data in characters.
@@ -377,8 +377,8 @@ __END__
  # Put data.
  $tags->put(
          ['b', 'text'],
-	 ['d', $data],
-	 ['e', 'text'],
+         ['d', $data],
+         ['e', 'text'],
  );
 
  # Print.

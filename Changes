@@ -1,4 +1,5 @@
 0.04
+ - Remove tabs from doc.
  - Update copyright years.
  - Update to Module::Install@1.21.
 
