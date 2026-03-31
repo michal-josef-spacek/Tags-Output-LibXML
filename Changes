@@ -1,4 +1,5 @@
 0.04
+ - Add tests for finalize() method.
  - Remove tabs from doc.
  - Rename example files to better names.
  - Rename test files to better names.
