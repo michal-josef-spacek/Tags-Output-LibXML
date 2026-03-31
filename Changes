@@ -1,3 +1,5 @@
+0.05
+
 0.04 2026-03-31T22:17:28+02:00
  - Add tests for finalize() method.
  - Remove tabs from doc.
