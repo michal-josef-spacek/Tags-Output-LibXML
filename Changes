@@ -1,6 +1,7 @@
 0.04
  - Remove tabs from doc.
  - Rename example files to better names.
+ - Rename test files to better names.
  - Update copyright years.
  - Update to Module::Install@1.21.
 
