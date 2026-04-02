@@ -222,10 +222,10 @@ __END__
  use Tags::Output::LibXML;
 
  my $tags = Tags::Output::LibXML->new(%parameters);
- $tags->put(['b', 'element']);
- my @open_elements = $tags->open_elements;
  $tags->finalize;
  $tags->flush($reset_flag);
+ my @open_elements = $tags->open_elements;
+ $tags->put(['b', 'element']);
  $tags->reset;
 
 =head1 DESCRIPTION
