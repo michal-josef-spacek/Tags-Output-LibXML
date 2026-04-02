@@ -1,4 +1,5 @@
 0.05
+ - Add test messages.
  - Fix open_elements() returned values.
  - Fix open_elements() in doc (was deprecated open_tags()).
 

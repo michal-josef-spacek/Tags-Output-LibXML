@@ -10,13 +10,15 @@ use Test::NoWarnings;
 eval {
 	Tags::Output::LibXML->new('');
 };
-is($EVAL_ERROR, "Unknown parameter ''.\n");
+is($EVAL_ERROR, "Unknown parameter ''.\n",
+	"Unknown parameter ''.");
 
 # Test.
 eval {
 	Tags::Output::LibXML->new('something' => 'value');
 };
-is($EVAL_ERROR, "Unknown parameter 'something'.\n");
+is($EVAL_ERROR, "Unknown parameter 'something'.\n",
+	"Unknown parameter 'something'.");
 
 # Test.
 my $obj = Tags::Output::LibXML->new;
