@@ -12,93 +12,127 @@ SYNOPSIS
      $tags->reset;
 
 DESCRIPTION
-     This class is only for XML structures.
+    This class is only for XML structures.
 
 METHODS
-    "new(%parameters)"
-             Constructor.
+  "new"
+     my $tags = Tags::Output::LibXML->new(%parameters);
 
-            *       "cdata_callback"
+    Constructor.
 
-                     Subroutine for output processing of cdata.
-                     Input argument is reference to array.
-                     Default value is undef.
-                     Example is similar as 'data_callback'.
+    *       "cdata_callback"
 
-            *       "data_callback"
+            Subroutine for output processing of cdata.
 
-                     Subroutine for output processing of data, cdata and raw data.
-                     Input argument is reference to array.
-                     Default value is undef.
+            Input argument is reference to array.
 
-                     Example:
-                     'data_callback' => sub {
-                             my $data_ar = shift;
-                             foreach my $data (@{$data_ar}) {
+            Default value is undef.
 
-                                     # Some process.
-                                     $data =~ s/^\s*//ms;
-                             }
+            Example is similar as 'data_callback'.
+
+    *       "data_callback"
+
+            Subroutine for output processing of data, cdata and raw data.
+
+            Input argument is reference to array.
+
+            Default value is undef.
+
+            Example:
+
+             'data_callback' => sub {
+                     my $data_ar = shift;
+                     foreach my $data (@{$data_ar}) {
+
+                             # Some process.
+                             $data =~ s/^\s*//ms;
                      }
+             }
 
-            *       "encoding"
+    *       "encoding"
 
-                     Encoding for XML header.
-                     Default is 'UTF-8'.
+            Encoding for XML header.
 
-            *       "no_simple"
+            Default is 'UTF-8'.
 
-                     TODO not implemented.
-                     Reference to array of tags, that can't by simple.
-                     Default is [].
+    *       "no_simple"
 
-            *       "output_handler"
+            TODO not implemented.
 
-                     Handler for print output strings.
-                     Must be a GLOB.
-                     Default is undef.
+            Reference to array of tags, that can't by simple.
 
-            *       "preserved"
+            Default is [].
 
-                     TODO not implemented.
-                     Default value is reference to blank array.
+    *       "output_handler"
 
-            *       "set_indent"
+            Handler for print output strings.
 
-                     Set indent flag.
-                     Default is 0.
+            Must be a GLOB.
 
-            *       "skip_bad_tags"
+            Default is undef.
 
-                     Skip bad tags.
-                     Default value is 0.
+    *       "preserved"
 
-            *       "xml_version"
+            TODO not implemented.
 
-                     XML version for XML header.
-                     Default is "1.1".
+            Default value is reference to blank array.
 
-    "finalize()"
-             Finalize Tags output.
-             Automaticly puts end of all opened tags.
-             Returns undef.
+    *       "set_indent"
 
-    "flush($reset_flag)"
-             Flush tags in object.
-             If defined 'output_handler' flush to its.
-             Or return code.
-             If enabled $reset_flag, then resets internal variables via reset method.
+            Set indent flag.
 
-    "open_elements()"
-             Return array of opened elements.
+            Default is 0.
 
-    "put(@data)"
-             Put tags code in tags format.
-             Returns undef.
+    *       "skip_bad_tags"
 
-    "reset()"
-             Resets internal variables.
-             Returns undef.
+            Skip bad tags.
+
+            Default value is 0.
+
+    *       "xml_version"
+
+            XML version for XML header.
+
+            Default is "1.1".
+
+    Returns instance of object.
+
+  "finalize"
+     $tags->finalize;
+
+    Finalize Tags output.
+
+    Automaticly puts end of all opened tags.
+
+    Returns undef.
+
+  "flush"
+     $tags->flush($reset_flag);
+
+    Flush elements in object.
+
+    If defined 'output_handler' flush to its. Or return XML string. If
+    enabled $reset_flag, then resets internal variables via reset method.
+
+    Returns undef in case of set 'output_handler'. Returns string in other
+    cases.
+
+  "open_elements"
+     my @open_elements = $tags->open_elements;
+
+    Get list of opened elements.
+
+    Return array of strings.
+
+  "put"
+    Put Tags structure to object.
+
+    Returns undef.
+
+  "reset"
+    Resets internal variables.
+
+    Returns undef.
 
 ERRORS
      TODO

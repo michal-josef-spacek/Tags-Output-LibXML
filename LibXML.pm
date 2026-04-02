@@ -230,32 +230,38 @@ __END__
 
 =head1 DESCRIPTION
 
- This class is only for XML structures.
+This class is only for XML structures.
 
 =head1 METHODS
 
-=over 8
+=head2 C<new>
 
-=item C<new(%parameters)>
+ my $tags = Tags::Output::LibXML->new(%parameters);
 
- Constructor.
+Constructor.
 
 =over 8
 
 =item * C<cdata_callback>
 
- Subroutine for output processing of cdata.
- Input argument is reference to array.
- Default value is undef.
- Example is similar as 'data_callback'.
+Subroutine for output processing of cdata.
+
+Input argument is reference to array.
+
+Default value is undef.
+
+Example is similar as 'data_callback'.
 
 =item * C<data_callback>
 
- Subroutine for output processing of data, cdata and raw data.
- Input argument is reference to array.
- Default value is undef.
+Subroutine for output processing of data, cdata and raw data.
 
- Example:
+Input argument is reference to array.
+
+Default value is undef.
+
+Example:
+
  'data_callback' => sub {
          my $data_ar = shift;
          foreach my $data (@{$data_ar}) {
@@ -267,71 +273,96 @@ __END__
 
 =item * C<encoding>
 
- Encoding for XML header.
- Default is 'UTF-8'.
+Encoding for XML header.
+
+Default is 'UTF-8'.
 
 =item * C<no_simple>
 
- TODO not implemented.
- Reference to array of tags, that can't by simple.
- Default is [].
+TODO not implemented.
+
+Reference to array of tags, that can't by simple.
+
+Default is [].
 
 =item * C<output_handler>
 
- Handler for print output strings.
- Must be a GLOB.
- Default is undef.
+Handler for print output strings.
+
+Must be a GLOB.
+
+Default is undef.
 
 =item * C<preserved>
 
- TODO not implemented.
- Default value is reference to blank array.
+TODO not implemented.
+
+Default value is reference to blank array.
 
 =item * C<set_indent>
 
- Set indent flag.
- Default is 0.
+Set indent flag.
+
+Default is 0.
 
 =item * C<skip_bad_tags>
 
- Skip bad tags.
- Default value is 0.
+Skip bad tags.
+
+Default value is 0.
 
 =item * C<xml_version>
 
- XML version for XML header.
- Default is "1.1".
+XML version for XML header.
+
+Default is "1.1".
 
 =back
 
-=item C<finalize()>
+Returns instance of object.
 
- Finalize Tags output.
- Automaticly puts end of all opened tags.
- Returns undef.
+=head2 C<finalize>
 
-=item C<flush($reset_flag)>
+ $tags->finalize;
 
- Flush tags in object.
- If defined 'output_handler' flush to its.
- Or return code.
- If enabled $reset_flag, then resets internal variables via reset method. 
+Finalize Tags output.
 
-=item C<open_elements()>
+Automaticly puts end of all opened tags.
 
- Return array of opened elements.
+Returns undef.
 
-=item C<put(@data)>
+=head2 C<flush>
 
- Put tags code in tags format.
- Returns undef.
+ $tags->flush($reset_flag);
 
-=item C<reset()>
+Flush elements in object.
 
- Resets internal variables.
- Returns undef.
+If defined 'output_handler' flush to its.
+Or return XML string.
+If enabled C<$reset_flag>, then resets internal variables via reset method. 
 
-=back
+Returns undef in case of set 'output_handler'.
+Returns string in other cases.
+
+=head2 C<open_elements>
+
+ my @open_elements = $tags->open_elements;
+
+Get list of opened elements.
+
+Return array of strings.
+
+=head2 C<put>
+
+Put L<Tags> structure to object.
+
+Returns undef.
+
+=head2 C<reset>
+
+Resets internal variables.
+
+Returns undef.
 
 =head1 ERRORS
 
