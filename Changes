@@ -2,6 +2,7 @@
  - Add test messages.
  - Fix open_elements() returned values.
  - Fix open_elements() in doc (was deprecated open_tags()).
+ - Move bugtracker to Github.
  - Rewrite doc to use of =head2.
  - Sort methods in SYNOPSIS section in doc.
 
