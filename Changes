@@ -1,4 +1,5 @@
 0.05
+ - Fix open_elements() returned values.
 
 0.04 2026-03-31T22:17:28+02:00
  - Add tests for finalize() method.

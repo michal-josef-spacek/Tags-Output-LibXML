@@ -36,6 +36,15 @@ sub flush {
 	return $ret;
 }
 
+# Return array of opened elements.
+sub open_elements {
+	my $self = shift;
+
+	my @open_elements = map { $_->nodeName } @{$self->{'printed_tags'}};
+
+	return @open_elements;
+}
+
 # Resets internal variables.
 sub reset {
 	my $self = shift;
