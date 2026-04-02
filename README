@@ -6,7 +6,7 @@ SYNOPSIS
 
      my $tags = Tags::Output::LibXML->new(%parameters);
      $tags->put(['b', 'element']);
-     my @open_tags = $tags->open_tags;
+     my @open_elements = $tags->open_elements;
      $tags->finalize;
      $tags->flush($reset_flag);
      $tags->reset;
@@ -89,8 +89,8 @@ METHODS
              Or return code.
              If enabled $reset_flag, then resets internal variables via reset method.
 
-    "open_tags()"
-             Return array of opened tags.
+    "open_elements()"
+             Return array of opened elements.
 
     "put(@data)"
              Put tags code in tags format.

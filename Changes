@@ -1,5 +1,6 @@
 0.05
  - Fix open_elements() returned values.
+ - Fix open_elements() in doc (was deprecated open_tags()).
 
 0.04 2026-03-31T22:17:28+02:00
  - Add tests for finalize() method.

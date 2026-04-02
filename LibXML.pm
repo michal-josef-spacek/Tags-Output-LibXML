@@ -223,7 +223,7 @@ __END__
 
  my $tags = Tags::Output::LibXML->new(%parameters);
  $tags->put(['b', 'element']);
- my @open_tags = $tags->open_tags;
+ my @open_elements = $tags->open_elements;
  $tags->finalize;
  $tags->flush($reset_flag);
  $tags->reset;
@@ -317,9 +317,9 @@ __END__
  Or return code.
  If enabled $reset_flag, then resets internal variables via reset method. 
 
-=item C<open_tags()>
+=item C<open_elements()>
 
- Return array of opened tags.
+ Return array of opened elements.
 
 =item C<put(@data)>
 
